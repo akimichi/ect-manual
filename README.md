@@ -3,11 +3,18 @@
 
 ## 準備
 
+あらかじめnode.jsのパッケージ管理システムである nvm をインストールしておく必要がある。
 
-nvm 
-pandoc
-
+nvmが正常にインストールされたあとは、以下のコマンドを実行して必要なパッケージを取得する。
 
 ~~~
-$ pandoc -s -t revealjs -i -V theme:default -o build/html/ECT_presentation.html ECT_presentation.md
+$ nvm use 
+$ npm install
 ~~~
+
+以上を前提とすると、以下のコマンドで build/pdf/以下にPDFファイルが生成される。
+
+~~~
+$ gulp pdf
+~~~
+

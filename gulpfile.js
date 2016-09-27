@@ -17,7 +17,7 @@ gulp.task('pdf', function() {
                  .pipe(gulp.dest('build/pdf'));
 });
 
-gulp.task('html', function() {
+gulp.task('doc', function() {
     return gulp.src('index.md')
         .pipe(markdown())
         .pipe(gulp.dest('docs'));
@@ -32,7 +32,6 @@ gulp.task('html', function() {
 });
 
             // args: ['-s', '-t revealjs', '-i', '-V theme:default']
-// gulp.task('build', ['pdf','doc']);
 
 
 gulp.task('doccco', function() {
@@ -60,4 +59,5 @@ gulp.task('watch', function() {
         gulp.run('build');
     });
 });
-gulp.task('default', ['build']);
+gulp.task('build', ['pdf','doc']);
+gulp.task('default', ['build', 'deploy']);
