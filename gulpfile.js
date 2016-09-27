@@ -6,6 +6,7 @@ var foreach = require('gulp-foreach');
 var pandoc = require('gulp-pandoc');
 var pandocpdf = require('gulp-pandoc-pdf');
 var markdownpdf = require('gulp-markdown-pdf');
+var markdown = require('gulp-markdown');
 var docco = require("gulp-docco");
 var ghPages = require('gulp-gh-pages');
 
@@ -16,22 +17,25 @@ gulp.task('pdf', function() {
                  .pipe(gulp.dest('build/pdf'));
 });
 
-// gulp.task('html', function() {
-//     gulp.src('./*.md')
-//         .pipe(pandoc({
-//             from: 'markdown',
-//             to: 'html5',
-//             ext: '.html',
-//              args: ['-s', '-t revealjs', '-i', '-V theme:default']
-//             // args: ['--smart']
-//         }))
-//         .pipe(gulp.dest('build/html'));
-//         });
+gulp.task('html', function() {
+    return gulp.src('index.md')
+        .pipe(markdown())
+        .pipe(gulp.dest('docs'));
+    // gulp.src('./*.md')
+    //     .pipe(pandoc({
+    //         from: 'markdown',
+    //         to: 'html5',
+    //         ext: '.html',
+    //         args: ['--smart']
+    //     }))
+    //     .pipe(gulp.dest('docs/'));
+});
 
+            // args: ['-s', '-t revealjs', '-i', '-V theme:default']
 // gulp.task('build', ['pdf','doc']);
 
 
-gulp.task('doc', function() {
+gulp.task('doccco', function() {
   var options = {
     layout:     'parallel',
     output:     'docs',
