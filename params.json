@@ -1,0 +1,6 @@
+{
+  "name": "Ect-manual",
+  "tagline": "ECT運用マニュアル",
+  "body": "# ECT運用マニュアル\r\n\r\n\r\n## 準備\r\n\r\n\r\nnvm \r\npandoc\r\n\r\n\r\n~~~\r\n$ pandoc -s -t revealjs -i -V theme:default -o build/html/ECT_presentation.html ECT_presentation.md\r\n~~~\r\n",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
