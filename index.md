@@ -182,11 +182,11 @@
 ### ECT同意書
 
 
-![](./images/consent-doc.jpg)
+![](./docs/images/consent-doc.jpg)
 
 ### ECT記録用紙
 
-![](./images/ect_m_path.jpg)
+![](./docs/images/ect_m_path.jpg)
 
 ### 書誌
 

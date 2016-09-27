@@ -52,10 +52,8 @@ gulp.task('deploy', function() {
 });
 
 gulp.task('watch', function() {
-    gulp.watch('./ECT_manual.md', function(event) {
+    gulp.watch('./index.md', function(event) {
         gulp.run('build');
     });
 });
-
 gulp.task('default', ['build']);
-
