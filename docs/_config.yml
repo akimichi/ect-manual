@@ -1,3 +1,9 @@
+gems:
+    - jemoji
+    - jekyll-mentions
+    - jekyll-redirect-from
+    - jekyll-sitemap
+    - jekyll-feed
 highlighter: rouge
 auto: true
 server: true
