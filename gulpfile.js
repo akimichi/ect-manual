@@ -75,48 +75,49 @@ gulp.task('watch', function () {
     gulp.watch(['*.html', '_layouts/*.html', '_posts/*'], ['jekyll-rebuild']);
 });
 
+/**
+ * Default task, running just `gulp` will compile the sass,
+ * compile the jekyll site, launch BrowserSync & watch files.
+ */
+gulp.task('default', ['browser-sync', 'watch']);
 
-gulp.task('doc', function() {
-    return gulp.src('index.md')
-        .pipe(markdown())
-        .pipe(gulp.dest('docs'));
-    // gulp.src('./*.md')
-    //     .pipe(pandoc({
-    //         from: 'markdown',
-    //         to: 'html5',
-    //         ext: '.html',
-    //         args: ['--smart']
-    //     }))
-    //     .pipe(gulp.dest('docs/'));
+gulp.task("deploy", ["jekyll-build"], function () {
+    return gulp.src("./_site/**/*")
+        .pipe(ghPages());
 });
 
-            // args: ['-s', '-t revealjs', '-i', '-V theme:default']
+// gulp.task('watch', function() {
+//     gulp.watch('./index.md', function(event) {
+//         gulp.run('build');
+//     });
+// });
+
+// gulp.task('doc', function() {
+//     return gulp.src('index.md')
+//         .pipe(markdown())
+//         .pipe(gulp.dest('docs'));
+// });
 
 
-gulp.task('doccco', function() {
-  var options = {
-    layout:     'parallel',
-    output:     'docs',
-    template:   'docs/template/docco.jst',
-    css:        'docs/css/docco.css',
-    extension:  null,
-    languages:  {},
-    marked:     null
-  };
-  return gulp.src("./*.md")
-    .pipe(docco(options))
-    .pipe(gulp.dest('./docs'));
-});
+// gulp.task('doccco', function() {
+//   var options = {
+//     layout:     'parallel',
+//     output:     'docs',
+//     template:   'docs/template/docco.jst',
+//     css:        'docs/css/docco.css',
+//     extension:  null,
+//     languages:  {},
+//     marked:     null
+//   };
+//   return gulp.src("./*.md")
+//     .pipe(docco(options))
+//     .pipe(gulp.dest('./docs'));
+// });
 
-gulp.task('deploy', function() {
-  return gulp.src('./docs/**/*')
-    .pipe(ghPages());
-});
+// gulp.task('deploy', function() {
+//   return gulp.src('./docs/**/*')
+//     .pipe(ghPages());
+// });
 
-gulp.task('watch', function() {
-    gulp.watch('./index.md', function(event) {
-        gulp.run('build');
-    });
-});
-gulp.task('build', ['pdf','doc']);
-gulp.task('default', ['build', 'deploy']);
+// gulp.task('build', ['pdf','doc']);
+// gulp.task('default', ['build', 'deploy']);
