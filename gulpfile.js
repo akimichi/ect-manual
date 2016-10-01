@@ -17,7 +17,7 @@ var cp          = require('child_process');
 gulp.task('pdf', function() {
     gulp.src('./*.md')
                  .pipe(markdownpdf())
-                 .pipe(gulp.dest('build/pdf'));
+                 .pipe(gulp.dest('pdf'));
 });
 
 /**
