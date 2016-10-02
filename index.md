@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 ---
 
 # ECT実施マニュアル
