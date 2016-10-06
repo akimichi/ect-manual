@@ -3,4 +3,5 @@ _site
 .jekyll-metadata
 .publish
 node_modules/
+build/
 pdf/

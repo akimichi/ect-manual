@@ -13,6 +13,7 @@ var browserSync = require('browser-sync');
 var sass        = require('gulp-sass');
 var prefix      = require('gulp-autoprefixer');
 var cp          = require('child_process');
+var exec = require('child_process').exec;
 
 gulp.task('pdf', function() {
     gulp.src('./*.md')
@@ -28,9 +29,12 @@ var messages = {
 };
 
 gulp.task('jekyll-build', function (done) {
-    browserSync.notify(messages.jekyllBuild);
-    return cp.spawn( "jekyll" , ['build'], {stdio: 'inherit'})
-        .on('close', done);
+  browserSync.notify(messages.jekyllBuild);
+  return exec("jekyll build", function(err, stdout, stderr) {
+    console.log(stdout);
+  });
+    // return cp.spawn( "jekyll" , ['build'], {stdio: 'inherit'})
+    //     .on('close', done);
 });
 
 /**
