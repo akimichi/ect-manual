@@ -18,3 +18,11 @@ $ npm install
 $ gulp pdf
 ~~~
 
+## jekyll
+
+~~~
+$ jekyll --server 4000
+~~~
+
+
+
