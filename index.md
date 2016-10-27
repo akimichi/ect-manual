@@ -135,7 +135,9 @@ layout: default
 
 刺激部位は両側ECTで実施する。
 
-![](http://news.bbcimg.co.uk/media/images/68884000/jpg/_68884574_3shock.jpg)
+![](http://ceaccp.oxfordjournals.org/content/10/6/192/F1.large.jpg)
+
+<!-- ![](http://news.bbcimg.co.uk/media/images/68884000/jpg/_68884574_3shock.jpg) -->
 
 
 ### 発作が誘発されない場合の対処
@@ -143,6 +145,7 @@ layout: default
 良好な発作では、両側性の強直間代性発作で持続時間が少なくとも20~30秒程度あり、かつEEG上も同程度のてんかん波が出現している。
 
 ![](http://d8enmlqxfszw.cloudfront.net/content/aptrcpsych/13/4/298/F1.large.jpg)
+
 
 初回の刺激で発作がない場合、10~15秒程度待ったのちにおよそ1.5倍(50%)あげて再度刺激する。
 発作が短時間発作(15秒以内)の場合、発作不応期を避けるため45秒以上の間隔をあける。
@@ -181,6 +184,10 @@ layout: default
 --------------------------------------------------
 
 ##  参考資料 
+
+### フロー
+
+![](./images/ect-flow.png)
 
 ### サイマトロン
 
