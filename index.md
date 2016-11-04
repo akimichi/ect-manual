@@ -139,6 +139,9 @@ layout: default
 
 <!-- ![](http://news.bbcimg.co.uk/media/images/68884000/jpg/_68884574_3shock.jpg) -->
 
+### 脳波モニタリング
+
+* 
 
 ### 発作が誘発されない場合の対処
 

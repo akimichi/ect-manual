@@ -17,3 +17,7 @@ layout: default
 インピーダンスは 100-3000Ω以下が要件となる。
 
 ![](./images/thymatron-back.png)
+
+## データ解析 
+
+![](http://www.thymatron.com/images/catalog/short_course_ECT.gif)
